@@ -15,7 +15,7 @@
   --white: #ffffff;
   --header-height: 80px;
   --container-width: 90vw;
-  --border-radius: 10px;
+  --border-radius: 1rem;
   --base-font-size: 16px;
   --heading-font: 'RoadRadio', sans-serif;
   --text-font: 'Inter Tight', sans-serif;
@@ -186,7 +186,7 @@ h1, h2, h3, h4, h5, h6 {
   width: min(582px, 90%);
   background-color: var(--white);
   border-radius: var(--border-radius);
-  padding: 2.5rem;
+  padding: 4rem 3rem 4rem 4rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -214,28 +214,27 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    text-align: justify;
+    text-align: center;
   }
 
   .block1__buy__ticket {
     font-size: clamp(4.5rem, 24vw, 7.5rem);
-    margin-bottom: clamp(1.5rem, 6vw, 2.5rem);
-    text-align: justify;
+    text-align: center !important;
     line-height: 1.1;
   }
 
   .block1__text1 {
     font-size: clamp(2.625rem, 12vw, 3rem);
-    margin-bottom: auto;
-    text-align: justify;
+    text-align: center;
     line-height: 1.2;
   }
 
   .block1__phone {
-    margin-bottom: clamp(2rem, 8vw, 3rem);
-    justify-content: flex-start;
+    justify-content: center;
     font-size: 3rem;
+    text-align: center;
   }
 
   .block1__phone i {
@@ -312,14 +311,14 @@ h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
   text-align: left;
   line-height: 1.2;
-  margin-bottom: 1.25rem;
+
   font-family: var(--heading-font);
 }
 
 .block1__text1 {
-  font-size: clamp(1rem, 2vw, 1.125rem);
+  font-size: clamp(1.2rem, 2.4vw, 1.35rem);
   line-height: 1.;
-  margin-bottom: auto;
+  margin-bottom: 1.5rem;
   font-family: var(--text-font);
 }
 
@@ -328,25 +327,25 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   gap: 10px;
   color: var(--primary-color);
-  font-size: 18px;
-  margin-bottom: 20px;
+  font-size: 21.6px;
+  margin-bottom: 1.5rem;
 }
 
 .block1__phone i {
-  font-size: 24px;
+  font-size: 28.8px;
 }
 
 .block1__button {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 10px;
+  justify-content: flex-start;
+  gap: 1rem;
   background-color: var(--primary-color);
   color: var(--white);
   border: none;
   border-radius: var(--border-radius);
-  padding: 15px 30px;
-  font-size: 18px;
+  padding: 1.5rem 3rem;
+  font-size: 1.5rem;
   font-family: var(--text-font);
   cursor: pointer;
   transition: background-color 0.3s ease;
@@ -357,7 +356,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .block1__button i {
-  font-size: 20px;
+  font-size: 1.5rem;
 }
 
 /* Медиа-запросы */
@@ -432,13 +431,12 @@ h1, h2, h3, h4, h5, h6 {
 
 .block2__title {
   color: var(--white);
-  font-size: clamp(1.5rem, 4vw, 3.5rem);
-  font-weight: 700;
+  font-size: clamp(1.8rem, 4.8vw, 4.2rem);
+  font-weight: 500;
   text-align: center;
   margin: 0;
   line-height: 1.2;
   font-family: var(--heading-font);
-  max-width: min(90%, 1200px);
 }
 
 .block2__content {
@@ -450,6 +448,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .block2__cards {
+  width: clamp(19.8rem, 99vw, 88rem);
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
   gap: clamp(1.5rem, 3vw, 2.5rem);
@@ -479,7 +478,6 @@ h1, h2, h3, h4, h5, h6 {
   height: 30%;
   padding: clamp(3%, 5%, 6%) clamp(4%, 6%, 8%);
   flex: none;
-  display: flex;
   flex-direction: column;
   gap: clamp(0.5rem, 1.5vw, 1rem);
 }
@@ -491,7 +489,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .block2__card-text {
-  font-size: clamp(0.875rem, 1.4vw, 1.125rem);
+  font-size: clamp(1.1375rem, 1.82vw, 1.4625rem);
   line-height: 1.4;
   color: #444;
 }
@@ -507,7 +505,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .block2__card-icon {
   display: block;
-  width: clamp(1.2rem, 2vw, 2.5rem);
+  width: clamp(1.2rem, 2vw, 2rem);
   height: auto;
   margin: 0 0 clamp(0.5rem, 1.5vw, 1rem) 0;
   align-self: flex-start;
@@ -1057,9 +1055,36 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .block4__button-icon {
-  width: clamp(1rem, 2vw, 1.5rem);
-  height: auto;
+  width: 1.5em;
+  height: 1.5em;
   object-fit: contain;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 0.75em;
+}
+
+.block1__button .block4__button-icon,
+.block6__button .block4__button-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: 1rem;
+  margin-left: 0;
+}
+
+@media (max-width: 768px) {
+  .block4__button-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .block4__button-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+    margin-right: 0.375rem;
+  }
 }
 
 /* Медиа-запросы для блока 4 */
@@ -1100,6 +1125,7 @@ h1, h2, h3, h4, h5, h6 {
   .block4__container-text {
     font-size: 1rem;
     margin: 0.5rem 0;
+    font-weight: 600;
   }
   
   .block4__container-button {
@@ -1129,14 +1155,17 @@ h1, h2, h3, h4, h5, h6 {
   min-height: 100vh;
   background: linear-gradient(180deg, #000000 0%, #666666 100%);
   border-radius: var(--border-radius);
-  padding: 7vw 1.5vw 14vw 1.5vw  ;
+  padding: 10rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .block5__row {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
   width: 100%;
   gap: 4vw;
 }
@@ -1175,14 +1204,27 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-.block5__divider {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 11%;
-  background-color: var(--white);
-  border-radius: 0 0 var(--border-radius) var(--border-radius);
+@media (max-width: 768px) {
+  .block5__content {
+    padding: 1.5rem;
+    align-items: flex-start;
+  }
+
+  .block5__row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3vw;
+  }
+
+  .block5__description {
+    max-width: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .block5__content {
+    padding: 3rem 1rem;
+  }
 }
 
 /* Block6 */
@@ -1192,6 +1234,12 @@ h1, h2, h3, h4, h5, h6 {
   min-height: 100vh;
   background: url(images/block6_bg.jpg) center;
   background-size: cover;
+}
+
+.block6_header_icon {
+  width: clamp(2rem, 5vw, 3rem);
+  height: auto;
+  margin-bottom: 1rem;
 }
 
 .block6__content {
@@ -1227,11 +1275,6 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: center;
   align-items: center;
   width: 100%;
-}
-
-.block6__icon {
-  font-size: 48px;
-  color: var(--white);
 }
 
 .block6__title {
@@ -1496,5 +1539,39 @@ h1, h2, h3, h4, h5, h6 {
     min-width: 3vw;
     max-width: 12vw;
     margin-bottom: 2vh;
+  }
+}
+
+/* Разделители секций */
+.section-divider {
+  width: 100%;
+  height: clamp(6vh, 12vw, 15vh);
+  background-color: var(--white);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.section-divider::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Медиа-запросы для разделителей */
+@media (max-width: 768px) {
+  .section-divider {
+    height: clamp(1.5vh, 3vw, 4vh);
+  }
+}
+
+@media (max-width: 480px) {
+  .section-divider {
+    height: clamp(1vh, 2vw, 3vh);
   }
 }

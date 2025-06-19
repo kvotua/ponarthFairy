@@ -375,8 +375,8 @@ Light:
   m_Enabled: 1
   serializedVersion: 11
   m_Type: 1
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1
+  m_Color: {r: 0.8773585, g: 0.8773585, b: 0.8773585, a: 1}
+  m_Intensity: 1.02
   m_Range: 30.60069
   m_SpotAngle: 68.66095
   m_InnerSpotAngle: 0
@@ -418,8 +418,8 @@ Light:
   m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 0
-  m_ColorTemperature: 6420
+  m_BounceIntensity: 1.01
+  m_ColorTemperature: 5146
   m_UseColorTemperature: 1
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
@@ -438,8 +438,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 410087039}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.23456976, y: -0.40821788, z: 0.10938167, w: 0.8754261}
-  m_LocalPosition: {x: 82.45, y: 31, z: 15.1}
+  m_LocalRotation: {x: 0.03310157, y: -0.96314555, z: 0.14044602, w: 0.22700182}
+  m_LocalPosition: {x: 82.47353, y: 31.021439, z: 14.958588}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -908,7 +908,7 @@ Transform:
   m_GameObject: {fileID: 1500302633}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.5, z: 0, w: 0.8660254}
-  m_LocalPosition: {x: 11.81, y: 7.62, z: -138.88}
+  m_LocalPosition: {x: 11.81, y: 0.55, z: -138.88}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -927,8 +927,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65638a2ab0769f04095f92dda5da72d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  floatUpSpeedLimit: 4
-  floatUpSpeed: 10
+  floatUpSpeedLimit: 3
+  floatUpSpeed: 6
 --- !u!114 &1500302640
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1372,13 +1372,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2039058895}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.18301265, y: 0.6830127, z: -0.6830127, w: -0.18301265}
-  m_LocalPosition: {x: 0.03, y: 9.6, z: 0.17}
+  m_LocalRotation: {x: -0.15755899, y: 0.7663205, z: -0.58801836, w: -0.20533492}
+  m_LocalPosition: {x: 0.89, y: 9.14, z: 1.65}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1500302638}
-  m_LocalEulerAnglesHint: {x: 90, y: 210, z: 0}
+  m_LocalEulerAnglesHint: {x: 75, y: 210, z: 0}
 --- !u!114 &2039058900
 MonoBehaviour:
   m_ObjectHideFlags: 0

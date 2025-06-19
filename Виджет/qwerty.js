@@ -135,15 +135,7 @@ createApp({
         this.scene.add(this.mesh);
 
         // GUI (можно отключить для финальной версии)
-        const gui = new GUI();
-        gui.add(this.params, 'roughness', 0, 1, 0.01).onChange(v => material.roughness = v);
-        gui.add(this.params, 'iterations', 0, 64, 1).onChange(v => this.uniforms.iterations.value = v);
-        gui.add(this.params, 'depth', 0, 1, 0.01).onChange(v => this.uniforms.depth.value = v);
-        gui.add(this.params, 'smoothing', 0, 1, 0.01).onChange(v => this.uniforms.smoothing.value = v);
-        gui.add(this.params, 'displacement', 0, 0.3, 0.001).onChange(v => this.uniforms.displacement.value = v);
-        gui.add(this.params, 'speed', 0, 0.1, 0.001);
-        gui.addColor(this.params, 'colorA').onChange(v => this.uniforms.colorA.value.set(v));
-        gui.addColor(this.params, 'colorB').onChange(v => this.uniforms.colorB.value.set(v));
+       
 
         await this.setupEnvironment();
         this.setupOrbitControls();
@@ -181,7 +173,7 @@ function createApp(app) {
     renderer.domElement.style.width = '100%';
     renderer.domElement.style.height = '100%';
     renderer.domElement.style.display = 'block';
-    renderer.domElement.style.pointerEvents = 'none'; // Чтобы клики проходили сквозь canvas
+    // renderer.domElement.style.pointerEvents = 'none'; // УБРАТЬ или закомментировать!
     
     // Добавляем canvas внутрь ссылки
     const widgetLink = document.querySelector('.widget-link');
@@ -202,6 +194,7 @@ function createApp(app) {
     Object.assign(app, { scene, camera, renderer, clock });
     app.init().then(loop);
 }
+
 
 function createRenderer() {
     const renderer = new THREE.WebGLRenderer({ 

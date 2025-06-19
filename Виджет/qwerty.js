@@ -1,12 +1,61 @@
 import * as THREE from '//cdn.skypack.dev/three@0.131.1';
-import { GUI } from '//cdn.skypack.dev/three@0.131.1/examples/jsm/libs/dat.gui.module.js';
 import { OrbitControls } from '//cdn.skypack.dev/three@0.131.1/examples/jsm/controls/OrbitControls.js';
 import { RGBELoader } from '//cdn.skypack.dev/three@0.131.1/examples/jsm/loaders/RGBELoader.js';
 
 const hdriURL = 'https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/1k/empty_warehouse_01_1k.hdr';
-const heightMapURL = './oYS135g.jpeg';
-const displacementMapURL = './L1pqRg9.jpeg';
+const heightMapURL = 'https://denisska111.github.io/oYS135g.jpeg';
+const displacementMapURL = 'https://denisska111.github.io/L1pqRg9.jpeg';
 
+// --- Стили для виджета ---
+if (!document.getElementById('marble-widget-style')) {
+    const style = document.createElement('style');
+    style.id = 'marble-widget-style';
+    style.textContent = `
+      .widget-container {
+        position: fixed;
+        right: 20px;
+        bottom: 20px;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        overflow: visible;
+        background: none;
+        z-index: 10000;
+        pointer-events: none;
+      }
+      .widget-link {
+        display: block;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        overflow: visible;
+        pointer-events: auto;
+      }
+      .widget-link canvas {
+        display: block;
+        border-radius: 50%;
+        background: none;
+      }
+    `;
+    document.head.appendChild(style);
+}
+
+// --- Контейнер для виджета ---
+let container = document.querySelector('.widget-container');
+if (!container) {
+    container = document.createElement('div');
+    container.className = 'widget-container';
+    const link = document.createElement('a');
+    link.className = 'widget-link';
+    link.href = 'https://example.com'; // Замените на нужную ссылку
+    link.target = '_blank';
+    link.rel = 'noopener noreferrer';
+    link.ariaLabel = '3D Мраморный Шар';
+    container.appendChild(link);
+    document.body.appendChild(container);
+}
+
+// --- Основная логика виджета ---
 createApp({
     params: {
         roughness: 0.1,
@@ -134,9 +183,6 @@ createApp({
         this.mesh = new THREE.Mesh(geometry, material);
         this.scene.add(this.mesh);
 
-        // GUI (можно отключить для финальной версии)
-       
-
         await this.setupEnvironment();
         this.setupOrbitControls();
     },
@@ -168,12 +214,10 @@ function createApp(app) {
     const scene = new THREE.Scene();
     const renderer = createRenderer();
     const camera = createCamera();
-    
-    // Настройки рендерера
+
     renderer.domElement.style.width = '100%';
     renderer.domElement.style.height = '100%';
     renderer.domElement.style.display = 'block';
-   
 
     const widgetLink = document.querySelector('.widget-link');
     if (widgetLink) {
@@ -189,12 +233,10 @@ function createApp(app) {
         app.tick(clock.elapsedTime, delta);
         renderer.render(scene, camera);
     };
-    
+
     Object.assign(app, { scene, camera, renderer, clock });
     app.init().then(loop);
 }
-
-
 
 function createRenderer() {
     const renderer = new THREE.WebGLRenderer({ 

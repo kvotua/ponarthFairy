@@ -157,7 +157,7 @@ h1, h2, h3, h4, h5, h6 {
     content: '';
     width: 3.75rem;
     height: 3.75rem;
-    background: url('/images/placeholder.png') center;
+    background: url('/image/placeholder.png') center;
     background-size: contain;
     background-repeat: no-repeat;
   }
@@ -171,7 +171,7 @@ h1, h2, h3, h4, h5, h6 {
   align-items: flex-start;
   width: 100%;
   height: 100vh;
-  background: url("/images/lord.png") center;
+  background: url("/image/lord.png") center;
   background-size: cover;
 }
 
@@ -487,7 +487,7 @@ h1, h2, h3, h4, h5, h6 {
 .block2__content {
   width: 100%;
   min-height: min(42.5vh, 600px);
-  background: url("/images/forest.jpg") center;
+  background: url("/image/forest.jpg") center;
   background-size: cover;
   padding: clamp(2rem, 5vw, 4rem) clamp(1rem, 3vw, 2rem);
 }
@@ -577,7 +577,7 @@ h1, h2, h3, h4, h5, h6 {
   .block2__content {
     width: 100%;
     min-height: min(85vh, 1200px);
-    background: url("/images/forest.jpg") center;
+    background: url("/image/forest.jpg") center;
     background-size: cover;
     padding: clamp(2rem, 5vw, 4rem) clamp(1rem, 3vw, 2rem);
   }
@@ -809,7 +809,7 @@ h1, h2, h3, h4, h5, h6 {
 .block3 {
   width: 100%;
   min-height: 100vh;
-  background: url("/images/block3_bg.png") center;
+  background: url("/image/block3_bg.png") center;
   background-size: cover;
   background-position: center;
   position: relative;
@@ -1276,7 +1276,7 @@ h1, h2, h3, h4, h5, h6 {
   width: min(28vw, 90%);
   height: auto;
   aspect-ratio: 3/4;
-  background: url(images/ARmarker.png) center;
+  background: url(image/ARmarker.png) center;
   background-size: contain;
   background-repeat: no-repeat;
   filter: drop-shadow(-0.3vw -0.3vw 0.3vw rgba(0, 0, 0, 0.25)) drop-shadow(0.3vw 0.3vw 0.3vw rgba(0, 0, 0, 0.25));
@@ -1318,7 +1318,7 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   width: 100%;
   min-height: 100vh;
-  background: url(images/block6_bg.jpg) center;
+  background: url(image/block6_bg.jpg) center;
   background-size: cover;
 }
 

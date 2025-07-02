@@ -261,6 +261,8 @@ h1, h2, h3, h4, h5, h6 {
     font-size: clamp(3rem, 9.8vw, 11.2vw)
   }
 
+
+
 }
 
 
@@ -441,6 +443,14 @@ h1, h2, h3, h4, h5, h6 {
     height: 50vh;
   }
 
+}
+
+@media (max-width: 360px) {
+
+  .block1__inner{
+    left: 1.5rem;
+  }
+  
 }
 
 /* Block2 */
@@ -632,6 +642,12 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0;
   }
 }
+@media (max-width: 660px) {
+  .block2__content {
+    min-height: min(0vh, 1200px);
+  }
+}
+
 
 @media (max-width: 480px) {
   .block2__header {
@@ -666,6 +682,14 @@ h1, h2, h3, h4, h5, h6 {
     overflow: hidden;
     position: relative;
     padding: 20px 0;
+}
+
+
+@media (max-width: 360px) {
+  .block2__content{
+    min-height: min(45vh, 1200px);
+  }
+
 }
 
 /* Медиа-запросы для мобильного слайдера */
@@ -1702,6 +1726,28 @@ h1, h2, h3, h4, h5, h6 {
   flex: 0 0 100%;
   width: 100%;
   padding: 0 1rem;
+}
+
+@media (max-width: 360px) {
+  .mobile-slider__slide1.mobile-slider__slide{
+    padding: 0rem;
+  }
+  .mobile-slider:not(.mobile-slider--block3) .mobile-slider__card-content{
+    height: 11rem;
+  }
+
+  .mobile-slider--block3 .mobile-slider__card-content{
+    height: 9rem;
+  }
+  .block2__content{
+    padding: clamp(0rem, 5vw, 4rem) clamp(0rem, 0vw, 2rem);
+
+  }
+
+  .block3__content{
+    padding: 0.51rem 0rem;
+  }
+
 }
 
 .mobile-slider__card {

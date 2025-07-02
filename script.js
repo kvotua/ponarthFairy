@@ -12,8 +12,6 @@ class MobileSlider {
     this.touchEndX = 0;
     this.autoPlayInterval = null;
     this.autoPlayDelay = 3000;
-    this.isDragging = false;
-    this.dragOffset = 0;
 
     this.init();
   }
@@ -28,16 +26,7 @@ class MobileSlider {
   }
 
 
-  prepareSlidesForLoop(){
-    const firstClone = this.slides[0].cloneNode(true);
-    const lastClone = this.slides[this.slides.length - 1].cloneNode(true);
 
-    this.track.appendChild(firstClone);
-    this.track.insertBefore(lastClone, this.slides[0]);
-
-    this.slides = this.track.getElementsByClassName('mobile-slider__slide');
-    this.currentIndex = 1;
-  }
 
 
   startAutoPlay() {
